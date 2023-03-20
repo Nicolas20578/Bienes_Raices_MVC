@@ -39,7 +39,7 @@ app.use('/', propiedadesRoutes)
 
 
 
-// Definir in puerto y arrancar el proyecto
+// Definir un puerto y arrancar el proyecto
 const port = process.env.PORT || 7000;
 app.listen(port, () => {
     console.log(`El Servidor esta funcionando en el puerto ${port}`)
