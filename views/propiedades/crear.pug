@@ -18,28 +18,32 @@ block contenido
 
                     div 
                         label.block.text-sm.uppercase.text-gray-500.mb-3.font-bold(for="titulo") Titulo de Anuncio
-                        input#titulo.w-full.px-3.py-2.border.border-gray-300.rounded-md.placeholder-gray-400(placeholder="Titulo Propiedad, ej. Casa en la Playa" type="text" name="titulo")
+                        input#titulo.w-full.px-3.py-2.border.border-blue-500.rounded-md.placeholder-gray-400(placeholder="Titulo Propiedad, ej. Casa en la Playa" type="text" name="titulo")
                         
                     div
                         label(class="block text-sm uppercase text-gray-500 mb-3 font-bold" for="descripcion") Descripcion
-                        textarea#descripcion.w-full.px-3.py-2.border.border-gray-300.rounded-md.placeholder-gray-400(placeholder="Descripción De La Propiedad" name="descripcion")
+                        textarea#descripcion.w-full.px-3.py-2.border.border-blue-500.rounded-md.placeholder-gray-400(placeholder="Descripción De La Propiedad" name="descripcion")
 
                     div(class="md:flex md:gap-4 space-y-5 md:space-y-0")
 
                         div(class="md:w-1/2") 
                             label.block.text-sm.uppercase.text-gray-500.mb-3.font-bold(for="categoria") Categoria
-                            select#categoria.w-full.px-3.py-2.border.border-gray-300.rounded-md.placeholder-gray-400(name="categoria")
+                            select#categoria.w-full.px-3.py-2.border.border-blue-500.rounded-md.placeholder-gray-400(name="categoria")
                                 option(value="") - Seleccione - 
+                                each categoria in categorias 
+                                    option(value=categoria.id)= categoria.nombre
 
-                        div(class="md:w-1/2") 
+                        div(class="md:w-1/2")
                             label.block.text-sm.uppercase.text-gray-500.mb-3.font-bold(for="precio") Precio
-                            select#precio.w-full.px-3.py-2.border.border-gray-300.rounded-md.placeholder-gray-400(name="precio")
+                            select#precio.w-full.px-3.py-2.border.border-blue-500.rounded-md.placeholder-gray-400(name="precio")
                                 option(value="") - Seleccione - 
+                                each precio in precios 
+                                    option(value=precio.id)= precio.precio
 
                     div(class="md:flex md:gap-4 space-y-5 md:space-y-0")
                         div(class="md:w-1/3") 
                             label.block.text-sm.uppercase.text-gray-500.mb-3.font-bold(for="habitaciones") Habitaciones
-                            select#habitaciones.w-full.px-3.py-2.border.border-gray-300.rounded-md.placeholder-gray-400(name="habitaciones")
+                            select#habitaciones.w-full.px-3.py-2.border.border-blue-500.rounded-md.placeholder-gray-400(name="habitaciones")
                                 option(value="") - Seleccione - 
                                 - var n = 1;
                                     while n < 5
@@ -47,7 +51,7 @@ block contenido
 
                         div(class="md:w-1/3") 
                             label.block.text-sm.uppercase.text-gray-500.mb-3.font-bold(for="estacionamiento") Estacionamiento
-                            select#estacionamiento.w-full.px-3.py-2.border.border-gray-300.rounded-md.placeholder-gray-400(name="estacionamiento")
+                            select#estacionamiento.w-full.px-3.py-2.border.border-blue-500.rounded-md.placeholder-gray-400(name="estacionamiento")
                                 option(value="") - Seleccione - 
                                 - var n = 1;
                                     while n < 3
@@ -55,7 +59,7 @@ block contenido
 
                         div(class="md:w-1/3") 
                             label.block.text-sm.uppercase.text-gray-500.mb-3.font-bold(for="wc") WC
-                            select#wc.w-full.px-3.py-2.border.border-gray-300.rounded-md.placeholder-gray-400(name="wc")
+                            select#wc.w-full.px-3.py-2.border.border-blue-500.rounded-md.placeholder-gray-400(name="wc")
                                 option(value="") - Seleccione - 
                                 - var n = 1;
                                     while n < 5
